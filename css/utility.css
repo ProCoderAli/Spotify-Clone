@@ -1,0 +1,6 @@
+.border{
+    border: 2px solid red;
+}
+.invert{
+    filter: invert(1);
+}
