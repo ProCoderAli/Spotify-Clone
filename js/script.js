@@ -11,6 +11,8 @@ let songInfo = document.querySelector('.songinfo');
 let SongCardList = document.querySelector('.list');
 let previous = document.querySelector('.previous');
 let next = document.querySelector('.next');
+let songVolume = document.querySelector('#volumeSeekbar');
+
 
 let currentSong;
 let songs = [];
@@ -70,7 +72,7 @@ function createCards() {
             </li> 
                `
             }
-            attachClickListeners(); // Attach click listeners after cards are generated
+            attachClickListeners(); 
         });
     });
 }
@@ -98,7 +100,6 @@ function attachClickListeners() {
                 progress.style.width = progressPercentage + '%';
                 circle.style.left = progressPercentage + '%';
             });
-            // Use songURL to play the song associated with the clicked card
         });
     });
     // For space button click song play
